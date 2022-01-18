@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigUI</class>
+ <widget class="QMainWindow" name="ConfigUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>767</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 85, 85);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="LeftTopFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>361</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(43, 43, 43);
+border-style: solid;
+border-color: rgb(43, 43, 43);
+border-width: 2px;
+border-radius: 40px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="LefTopTitleFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>321</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 10px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="LeftTopTitle">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>0</y>
+        <width>301</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Project File Directories List</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTreeWidget" name="ProjectList">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>50</y>
+       <width>291</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Project Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Project DIR</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>mom</string>
+      </property>
+      <property name="text">
+       <string>dad</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>\asdf</string>
+      </property>
+      <property name="text">
+       <string>asdf</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGraphicsView" name="Wave">
+    <property name="geometry">
+     <rect>
+      <x>-190</x>
+      <y>128</y>
+      <width>957</width>
+      <height>317</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/wave/Image/Wave/wave_2.png);
+border-style: solid;
+border-color: rgb(43, 43, 43);
+</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="LeftBottomFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>361</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(43, 43, 43);
+border-style: solid;
+border-color: rgb(43, 43, 43);
+border-width: 2px;
+border-radius: 40px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="LeftBottomTitleFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>321</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 10px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="LeftBottomTitle">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>0</y>
+        <width>301</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Github Username Config</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="GitHubUsernameInput">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>281</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SetGithubName">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>95</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <property name="text">
+      <string>Set Github Name</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="RightFrameTop">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>361</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(43, 43, 43);
+border-style: solid;
+border-color: rgb(43, 43, 43);
+border-width: 2px;
+border-radius: 40px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="RightTopTitleFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>321</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 10px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="RightTopTitle">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>0</y>
+        <width>301</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Manual Project Add</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="ManualProjectLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>55</y>
+       <width>311</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;
+QLineEdit[readOnly=\&quot;true\&quot;]</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddProjectTop">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>135</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <property name="text">
+      <string>Add Project</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChooseFolderTop">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>90</y>
+       <width>76</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <property name="text">
+      <string>Choose Folder</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FolderOutputTop">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>90</y>
+       <width>230</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;
+QLineEdit[readOnly=\&quot;true\&quot;]</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="RightBottomFrame">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>200</y>
+      <width>361</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(43, 43, 43);
+border-style: solid;
+border-color: rgb(43, 43, 43);
+border-width: 2px;
+border-radius: 40px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="RightBottomTitleFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>321</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 10px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="RightBottomTitle">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>0</y>
+        <width>301</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Github Project Add</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="GithubProjectAddCombo">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>55</y>
+       <width>311</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChooseFolderBottom">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>90</y>
+       <width>76</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <property name="text">
+      <string>Choose Folder</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FolderOutputBottom">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>90</y>
+       <width>230</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;
+QLineEdit[readOnly=\&quot;true\&quot;]</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddProjectBottom">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>135</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 153, 255);
+border-style: solid;
+border-color: rgb(0, 153, 255);
+border-width: 2px;
+border-radius: 8px;</string>
+     </property>
+     <property name="text">
+      <string>Add Project</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>Wave</zorder>
+   <zorder>LeftTopFrame</zorder>
+   <zorder>LeftBottomFrame</zorder>
+   <zorder>RightFrameTop</zorder>
+   <zorder>RightBottomFrame</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>767</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="wave.qrc"/>
+ </resources>
+ <connections/>
+</ui>
