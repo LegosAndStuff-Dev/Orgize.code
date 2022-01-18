@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Orgize.code Project Files
+ZC_pyuic5.exe
+ZC_pyrcc5.exe
+ZB_wave.qrc
+ZA__testing_code.py
