@@ -435,7 +435,7 @@ class MainDashboard(object):
             self.model.setRootPath(dir)
             self.treeView.setRootIndex(self.model.index(dir))
 
-            self.CurrentProject.setText(f"{name} Dashboard")
+            self.CurrentProject.setText(f"{name}⠀Dashboard")
 
             conn.close()
 
