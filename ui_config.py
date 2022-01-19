@@ -222,7 +222,7 @@ class Ui_ConfigUI(object):
         self.ManualProjectLineEdit.setObjectName("ManualProjectLineEdit")
         self.ManualProjectLineEdit.setPlaceholderText("Enter Project Name")
 
-        #Right Top Frame -Manual -AddProject -Top
+        #Center Top Frame -Manual -AddProject -Top
         self.AddProjectTop = QtWidgets.QPushButton(self.CenterFrameTop)
         self.AddProjectTop.setGeometry(QtCore.QRect(145, 145, 121, 23))
         self.AddProjectTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -233,7 +233,7 @@ class Ui_ConfigUI(object):
         self.AddProjectTop.setObjectName("AddProjectTop")
         self.AddProjectTop.clicked.connect(self.MakeProjectTopEvent)
 
-        #Right Top Frame -ChooseFolderTop
+        #Center Top Frame -ChooseFolderTop
         self.ChooseFolderTop = QtWidgets.QPushButton(self.CenterFrameTop)
         self.ChooseFolderTop.setGeometry(QtCore.QRect(25, 100, 111, 23))
         self.ChooseFolderTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -244,7 +244,7 @@ class Ui_ConfigUI(object):
         self.ChooseFolderTop.setObjectName("ChooseFolderTop")
         self.ChooseFolderTop.clicked.connect(self.ChooseFolderTopEvent)
 
-        #Right Top Folder -FolderOutput
+        #Center Top Folder -FolderOutput
         self.FolderOutputTop = QtWidgets.QLineEdit(self.CenterFrameTop)
         self.FolderOutputTop.setGeometry(QtCore.QRect(140, 100, 245, 23))
         self.FolderOutputTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -258,7 +258,7 @@ class Ui_ConfigUI(object):
         self.FolderOutputTop.setObjectName("FolderOutputTop")
 
 
-        #Right Bottom Frame
+        #Center Bottom Frame
         self.CenterBottomFrame = QtWidgets.QFrame(self.centralwidget)
         self.CenterBottomFrame.setGeometry(QtCore.QRect(440, 310, 411, 241))
         self.CenterBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
@@ -270,7 +270,7 @@ class Ui_ConfigUI(object):
         self.CenterBottomFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.CenterBottomFrame.setObjectName("CenterBottomFrame")
 
-        #Right Bottom Frame -FrameLabel
+        #Center Bottom Frame -FrameLabel
         self.CenterBottomTitleFrame = QtWidgets.QFrame(self.CenterBottomFrame)
         self.CenterBottomTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
         self.CenterBottomTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -282,7 +282,7 @@ class Ui_ConfigUI(object):
         self.CenterBottomTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.CenterBottomTitleFrame.setObjectName("CenterBottomTitleFrame")
 
-        #Right Bottom Frame -FrameLabel -Title
+        #Center Bottom Frame -FrameLabel -Title
         self.CenterBottomTitle = QtWidgets.QLabel(self.CenterBottomTitleFrame)
         self.CenterBottomTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
         font = QtGui.QFont()
@@ -291,7 +291,7 @@ class Ui_ConfigUI(object):
         self.CenterBottomTitle.setAlignment(QtCore.Qt.AlignCenter)
         self.CenterBottomTitle.setObjectName("CenterBottomTitle")
 
-        #Right Bottom Frame -GithubProjectAddCombo -ComboBox
+        #Center Bottom Frame -GithubProjectAddCombo -ComboBox
         self.GithubProjectAddCombo = QtWidgets.QComboBox(self.CenterBottomFrame)
         self.GithubProjectAddCombo.setGeometry(QtCore.QRect(25, 55, 361, 30))
         self.GithubProjectAddCombo.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -315,7 +315,7 @@ class Ui_ConfigUI(object):
         except:
             self.GithubProjectAddCombo.addItem("No Repos Found")
 
-        #Right Bottom Frame -ChoseFolder
+        #Center Bottom Frame -ChoseFolder
         self.ChooseFolderBottom = QtWidgets.QPushButton(self.CenterBottomFrame)
         self.ChooseFolderBottom.setGeometry(QtCore.QRect(25, 100, 111, 23))
         self.ChooseFolderBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -326,7 +326,7 @@ class Ui_ConfigUI(object):
         self.ChooseFolderBottom.setObjectName("ChooseFolderBottom")
         self.ChooseFolderBottom.clicked.connect(self.ChooseFolderBottomEvent)
 
-        #Right Bottom Folder -FolderOutput
+        #Center Bottom Folder -FolderOutput
         self.FolderOutputBottom = QtWidgets.QLineEdit(self.CenterBottomFrame)
         self.FolderOutputBottom.setGeometry(QtCore.QRect(140, 100, 245, 23))
         self.FolderOutputBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -339,7 +339,7 @@ class Ui_ConfigUI(object):
         self.FolderOutputBottom.setReadOnly(True)
         self.FolderOutputBottom.setObjectName("FolderOutputBottom")
 
-        #Right Bottom Frame -AddProject
+        #Center Bottom Frame -AddProject
         self.AddProjectBottom = QtWidgets.QPushButton(self.CenterBottomFrame)
         self.AddProjectBottom.setGeometry(QtCore.QRect(145, 145, 121, 23))
         self.AddProjectBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
@@ -363,7 +363,7 @@ class Ui_ConfigUI(object):
         self.RightTopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.RightTopFrame.setObjectName("RightTopFrame")
 
-        #Right Bottom FRame
+        #Right Bottom Frame
         self.RightBottomFrame = QtWidgets.QFrame(self.centralwidget)
         self.RightBottomFrame.setGeometry(QtCore.QRect(870, 310, 411, 241))
         self.RightBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
