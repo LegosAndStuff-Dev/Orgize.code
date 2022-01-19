@@ -18,7 +18,7 @@ class Ui_ConfigUI(object):
 
         #Current Project / Title
         self.Title = QtWidgets.QFrame(self.centralwidget)
-        self.Title.setGeometry(QtCore.QRect(10, 10, 842, 40))
+        self.Title.setGeometry(QtCore.QRect(10, 10, 1281, 40))
         self.Title.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                             "border-style: solid;\n"
                                             "border-color: rgb(43, 43, 43);\n"
@@ -30,7 +30,7 @@ class Ui_ConfigUI(object):
 
         #Title -CurrentProject
         self.CurrentProject = QtWidgets.QLabel(self.Title)
-        self.CurrentProject.setGeometry(QtCore.QRect(1, 0, 842, 40))
+        self.CurrentProject.setGeometry(QtCore.QRect(1, 0, 1281, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.CurrentProject.setFont(font)
