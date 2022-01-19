@@ -176,41 +176,41 @@ class Ui_ConfigUI(object):
         self.SetGithubName.clicked.connect(self.GithubUsernameGetEvent)
 
         
-        #Right Top Frame
-        self.RightFrameTop = QtWidgets.QFrame(self.centralwidget)
-        self.RightFrameTop.setGeometry(QtCore.QRect(440, 60, 411, 241))
-        self.RightFrameTop.setStyleSheet("background-color: rgb(43, 43, 43);\n"
+        #Cent Top Frame
+        self.CenterFrameTop = QtWidgets.QFrame(self.centralwidget)
+        self.CenterFrameTop.setGeometry(QtCore.QRect(440, 60, 411, 241))
+        self.CenterFrameTop.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                         "border-style: solid;\n"
                                         "border-color: rgb(43, 43, 43);\n"
                                         "border-width: 2px;\n"
                                         "border-radius: 40px;")
-        self.RightFrameTop.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.RightFrameTop.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.RightFrameTop.setObjectName("RightFrameTop")
+        self.CenterFrameTop.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.CenterFrameTop.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.CenterFrameTop.setObjectName("CenterFrameTop")
 
-        #Right Top Frame -FrameLabel
-        self.RightTopTitleFrame = QtWidgets.QFrame(self.RightFrameTop)
-        self.RightTopTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
-        self.RightTopTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+        #Center Top Frame -FrameLabel
+        self.CenterTopTitleFrame = QtWidgets.QFrame(self.CenterFrameTop)
+        self.CenterTopTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
+        self.CenterTopTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(0, 153, 255);\n"
                                                 "border-width: 2px;\n"
                                                 "border-radius: 10px;")
-        self.RightTopTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.RightTopTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.RightTopTitleFrame.setObjectName("RightTopTitleFrame")
+        self.CenterTopTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.CenterTopTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.CenterTopTitleFrame.setObjectName("CenterTopTitleFrame")
 
-        #Right Top Frame -FrameLabel -Title
-        self.RightTopTitle = QtWidgets.QLabel(self.RightTopTitleFrame)
-        self.RightTopTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
+        #Center Top Frame -FrameLabel -Title
+        self.CenterTopTitle = QtWidgets.QLabel(self.CenterTopTitleFrame)
+        self.CenterTopTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.RightTopTitle.setFont(font)
-        self.RightTopTitle.setAlignment(QtCore.Qt.AlignCenter)
-        self.RightTopTitle.setObjectName("RightTopTitle")
+        self.CenterTopTitle.setFont(font)
+        self.CenterTopTitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.CenterTopTitle.setObjectName("CenterTopTitle")
 
-        #Right Top Frame -ManualProjectLineEdit
-        self.ManualProjectLineEdit = QtWidgets.QLineEdit(self.RightFrameTop)
+        #Center Top Frame -ManualProjectLineEdit
+        self.ManualProjectLineEdit = QtWidgets.QLineEdit(self.CenterFrameTop)
         self.ManualProjectLineEdit.setGeometry(QtCore.QRect(25, 55, 361, 30))
         self.ManualProjectLineEdit.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -223,7 +223,7 @@ class Ui_ConfigUI(object):
         self.ManualProjectLineEdit.setPlaceholderText("Enter Project Name")
 
         #Right Top Frame -Manual -AddProject -Top
-        self.AddProjectTop = QtWidgets.QPushButton(self.RightFrameTop)
+        self.AddProjectTop = QtWidgets.QPushButton(self.CenterFrameTop)
         self.AddProjectTop.setGeometry(QtCore.QRect(145, 145, 121, 23))
         self.AddProjectTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                         "border-style: solid;\n"
@@ -234,7 +234,7 @@ class Ui_ConfigUI(object):
         self.AddProjectTop.clicked.connect(self.MakeProjectTopEvent)
 
         #Right Top Frame -ChooseFolderTop
-        self.ChooseFolderTop = QtWidgets.QPushButton(self.RightFrameTop)
+        self.ChooseFolderTop = QtWidgets.QPushButton(self.CenterFrameTop)
         self.ChooseFolderTop.setGeometry(QtCore.QRect(25, 100, 111, 23))
         self.ChooseFolderTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -245,7 +245,7 @@ class Ui_ConfigUI(object):
         self.ChooseFolderTop.clicked.connect(self.ChooseFolderTopEvent)
 
         #Right Top Folder -FolderOutput
-        self.FolderOutputTop = QtWidgets.QLineEdit(self.RightFrameTop)
+        self.FolderOutputTop = QtWidgets.QLineEdit(self.CenterFrameTop)
         self.FolderOutputTop.setGeometry(QtCore.QRect(140, 100, 245, 23))
         self.FolderOutputTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                         "border-style: solid;\n"
@@ -259,40 +259,40 @@ class Ui_ConfigUI(object):
 
 
         #Right Bottom Frame
-        self.RightBottomFrame = QtWidgets.QFrame(self.centralwidget)
-        self.RightBottomFrame.setGeometry(QtCore.QRect(440, 310, 411, 241))
-        self.RightBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
+        self.CenterBottomFrame = QtWidgets.QFrame(self.centralwidget)
+        self.CenterBottomFrame.setGeometry(QtCore.QRect(440, 310, 411, 241))
+        self.CenterBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(43, 43, 43);\n"
                                                 "border-width: 2px;\n"
                                                 "border-radius: 40px;")
-        self.RightBottomFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.RightBottomFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.RightBottomFrame.setObjectName("RightBottomFrame")
+        self.CenterBottomFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.CenterBottomFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.CenterBottomFrame.setObjectName("CenterBottomFrame")
 
         #Right Bottom Frame -FrameLabel
-        self.RightBottomTitleFrame = QtWidgets.QFrame(self.RightBottomFrame)
-        self.RightBottomTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
-        self.RightBottomTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+        self.CenterBottomTitleFrame = QtWidgets.QFrame(self.CenterBottomFrame)
+        self.CenterBottomTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
+        self.CenterBottomTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(0, 153, 255);\n"
                                                 "border-width: 2px;\n"
                                                 "border-radius: 10px;")
-        self.RightBottomTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.RightBottomTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.RightBottomTitleFrame.setObjectName("RightBottomTitleFrame")
+        self.CenterBottomTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.CenterBottomTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.CenterBottomTitleFrame.setObjectName("CenterBottomTitleFrame")
 
         #Right Bottom Frame -FrameLabel -Title
-        self.RightBottomTitle = QtWidgets.QLabel(self.RightBottomTitleFrame)
-        self.RightBottomTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
+        self.CenterBottomTitle = QtWidgets.QLabel(self.CenterBottomTitleFrame)
+        self.CenterBottomTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.RightBottomTitle.setFont(font)
-        self.RightBottomTitle.setAlignment(QtCore.Qt.AlignCenter)
-        self.RightBottomTitle.setObjectName("RightBottomTitle")
+        self.CenterBottomTitle.setFont(font)
+        self.CenterBottomTitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.CenterBottomTitle.setObjectName("CenterBottomTitle")
 
         #Right Bottom Frame -GithubProjectAddCombo -ComboBox
-        self.GithubProjectAddCombo = QtWidgets.QComboBox(self.RightBottomFrame)
+        self.GithubProjectAddCombo = QtWidgets.QComboBox(self.CenterBottomFrame)
         self.GithubProjectAddCombo.setGeometry(QtCore.QRect(25, 55, 361, 30))
         self.GithubProjectAddCombo.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -316,7 +316,7 @@ class Ui_ConfigUI(object):
             self.GithubProjectAddCombo.addItem("No Repos Found")
 
         #Right Bottom Frame -ChoseFolder
-        self.ChooseFolderBottom = QtWidgets.QPushButton(self.RightBottomFrame)
+        self.ChooseFolderBottom = QtWidgets.QPushButton(self.CenterBottomFrame)
         self.ChooseFolderBottom.setGeometry(QtCore.QRect(25, 100, 111, 23))
         self.ChooseFolderBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -327,7 +327,7 @@ class Ui_ConfigUI(object):
         self.ChooseFolderBottom.clicked.connect(self.ChooseFolderBottomEvent)
 
         #Right Bottom Folder -FolderOutput
-        self.FolderOutputBottom = QtWidgets.QLineEdit(self.RightBottomFrame)
+        self.FolderOutputBottom = QtWidgets.QLineEdit(self.CenterBottomFrame)
         self.FolderOutputBottom.setGeometry(QtCore.QRect(140, 100, 245, 23))
         self.FolderOutputBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -340,7 +340,7 @@ class Ui_ConfigUI(object):
         self.FolderOutputBottom.setObjectName("FolderOutputBottom")
 
         #Right Bottom Frame -AddProject
-        self.AddProjectBottom = QtWidgets.QPushButton(self.RightBottomFrame)
+        self.AddProjectBottom = QtWidgets.QPushButton(self.CenterBottomFrame)
         self.AddProjectBottom.setGeometry(QtCore.QRect(145, 145, 121, 23))
         self.AddProjectBottom.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -351,29 +351,29 @@ class Ui_ConfigUI(object):
         self.AddProjectBottom.clicked.connect(self.MakeProjectBottomEvent)
 
 
-        #right far
-        self.RightTop = QtWidgets.QFrame(self.centralwidget)
-        self.RightTop.setGeometry(QtCore.QRect(870, 60, 411, 241))
-        self.RightTop.setStyleSheet("background-color: rgb(43, 43, 43);\n"
+        #Right Top Frame
+        self.RightTopFrame = QtWidgets.QFrame(self.centralwidget)
+        self.RightTopFrame.setGeometry(QtCore.QRect(870, 60, 411, 241))
+        self.RightTopFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(43, 43, 43);\n"
                                                 "border-width: 2px;\n"
                                                 "border-radius: 40px;")
-        self.RightTop.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.RightTop.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.RightTop.setObjectName("RightTop")
+        self.RightTopFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.RightTopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.RightTopFrame.setObjectName("RightTopFrame")
 
-        #right far
-        self.Rightbootom = QtWidgets.QFrame(self.centralwidget)
-        self.Rightbootom.setGeometry(QtCore.QRect(870, 310, 411, 241))
-        self.Rightbootom.setStyleSheet("background-color: rgb(43, 43, 43);\n"
+        #Right Bottom FRame
+        self.RightBottomFrame = QtWidgets.QFrame(self.centralwidget)
+        self.RightBottomFrame.setGeometry(QtCore.QRect(870, 310, 411, 241))
+        self.RightBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(43, 43, 43);\n"
                                                 "border-width: 2px;\n"
                                                 "border-radius: 40px;")
-        self.Rightbootom.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.Rightbootom.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.Rightbootom.setObjectName("Rightbootom")
+        self.RightBottomFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.RightBottomFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.RightBottomFrame.setObjectName("RightBottomFrame")
 
 
         #Wave
@@ -402,14 +402,14 @@ class Ui_ConfigUI(object):
                             "};\n")
         
         #Raise
-        self.RightTop.raise_()
+        self.RightTopFrame.raise_()
         self.Wave.raise_()
         self.LeftTopFrame.raise_()
         self.LeftBottomFrame.raise_()
-        self.RightFrameTop.raise_()
+        self.CenterFrameTop.raise_()
+        self.CenterBottomFrame.raise_()
+        self.RightTopFrame.raise_()
         self.RightBottomFrame.raise_()
-        self.RightTop.raise_()
-        self.Rightbootom.raise_()
 
         #Other
         ConfigUI.setCentralWidget(self.centralwidget)
@@ -432,10 +432,10 @@ class Ui_ConfigUI(object):
         self.ProjectList.setSortingEnabled(__sortingEnabled)
         self.LeftBottomTitle.setText(_translate("ConfigUI", "Github Username Config"))
         self.SetGithubName.setText(_translate("ConfigUI", "Set Github Name"))
-        self.RightTopTitle.setText(_translate("ConfigUI", "Manual Project Add"))
+        self.CenterTopTitle.setText(_translate("ConfigUI", "Manual Project Add"))
         self.AddProjectTop.setText(_translate("ConfigUI", "Add Project"))
         self.ChooseFolderTop.setText(_translate("ConfigUI", "Choose Folder"))
-        self.RightBottomTitle.setText(_translate("ConfigUI", "Github Project Add"))
+        self.CenterBottomTitle.setText(_translate("ConfigUI", "Github Project Add"))
         self.ChooseFolderBottom.setText(_translate("ConfigUI", "Choose Folder"))
         self.AddProjectBottom.setText(_translate("ConfigUI", "Add Project"))
         self.CurrentProject.setText(_translate("MainWindow", f"Config Dashboard"))
