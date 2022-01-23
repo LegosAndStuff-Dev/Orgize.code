@@ -177,19 +177,19 @@ class Ui_ConfigUI(object):
 
         
         #Cent Top Frame
-        self.CenterFrameTop = QtWidgets.QFrame(self.centralwidget)
-        self.CenterFrameTop.setGeometry(QtCore.QRect(440, 60, 411, 241))
-        self.CenterFrameTop.setStyleSheet("background-color: rgb(43, 43, 43);\n"
+        self.CenterTopFrame = QtWidgets.QFrame(self.centralwidget)
+        self.CenterTopFrame.setGeometry(QtCore.QRect(440, 60, 411, 241))
+        self.CenterTopFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                         "border-style: solid;\n"
                                         "border-color: rgb(43, 43, 43);\n"
                                         "border-width: 2px;\n"
                                         "border-radius: 40px;")
-        self.CenterFrameTop.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.CenterFrameTop.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.CenterFrameTop.setObjectName("CenterFrameTop")
+        self.CenterTopFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.CenterTopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.CenterTopFrame.setObjectName("CenterTopFrame")
 
         #Center Top Frame -FrameLabel
-        self.CenterTopTitleFrame = QtWidgets.QFrame(self.CenterFrameTop)
+        self.CenterTopTitleFrame = QtWidgets.QFrame(self.CenterTopFrame)
         self.CenterTopTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
         self.CenterTopTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -210,7 +210,7 @@ class Ui_ConfigUI(object):
         self.CenterTopTitle.setObjectName("CenterTopTitle")
 
         #Center Top Frame -ManualProjectLineEdit
-        self.ManualProjectLineEdit = QtWidgets.QLineEdit(self.CenterFrameTop)
+        self.ManualProjectLineEdit = QtWidgets.QLineEdit(self.CenterTopFrame)
         self.ManualProjectLineEdit.setGeometry(QtCore.QRect(25, 55, 361, 30))
         self.ManualProjectLineEdit.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -223,7 +223,7 @@ class Ui_ConfigUI(object):
         self.ManualProjectLineEdit.setPlaceholderText("Enter Project Name")
 
         #Center Top Frame -Manual -AddProject -Top
-        self.AddProjectTop = QtWidgets.QPushButton(self.CenterFrameTop)
+        self.AddProjectTop = QtWidgets.QPushButton(self.CenterTopFrame)
         self.AddProjectTop.setGeometry(QtCore.QRect(145, 145, 121, 23))
         self.AddProjectTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                         "border-style: solid;\n"
@@ -234,7 +234,7 @@ class Ui_ConfigUI(object):
         self.AddProjectTop.clicked.connect(self.MakeProjectTopEvent)
 
         #Center Top Frame -ChooseFolderTop
-        self.ChooseFolderTop = QtWidgets.QPushButton(self.CenterFrameTop)
+        self.ChooseFolderTop = QtWidgets.QPushButton(self.CenterTopFrame)
         self.ChooseFolderTop.setGeometry(QtCore.QRect(25, 100, 111, 23))
         self.ChooseFolderTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                 "border-style: solid;\n"
@@ -245,7 +245,7 @@ class Ui_ConfigUI(object):
         self.ChooseFolderTop.clicked.connect(self.ChooseFolderTopEvent)
 
         #Center Top Folder -FolderOutput
-        self.FolderOutputTop = QtWidgets.QLineEdit(self.CenterFrameTop)
+        self.FolderOutputTop = QtWidgets.QLineEdit(self.CenterTopFrame)
         self.FolderOutputTop.setGeometry(QtCore.QRect(140, 100, 245, 23))
         self.FolderOutputTop.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                         "border-style: solid;\n"
@@ -300,12 +300,12 @@ class Ui_ConfigUI(object):
                                                 "border-width: 2px;\n"
                                                 "border-radius: 8px;")
         self.GithubProjectAddCombo.setObjectName("GithubProjectAddCombo")
-        self.GithubProjectAddCombo.setPlaceholderText("Choose a project")
 
         with open('config.json') as f:
             data = json.load(f)
 
         username = data["Config"][0]["Github_Username"]
+
         try: 
             g = Github()
             user = g.get_user(username)
@@ -353,7 +353,7 @@ class Ui_ConfigUI(object):
 
         #Right Top Frame
         self.RightTopFrame = QtWidgets.QFrame(self.centralwidget)
-        self.RightTopFrame.setGeometry(QtCore.QRect(870, 60, 411, 241))
+        self.RightTopFrame.setGeometry(QtCore.QRect(870, 60, 411, 174))
         self.RightTopFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(43, 43, 43);\n"
@@ -363,9 +363,69 @@ class Ui_ConfigUI(object):
         self.RightTopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.RightTopFrame.setObjectName("RightTopFrame")
 
+        #Right Top Frame -FrameLabel
+        self.RightTopTitleFrame = QtWidgets.QFrame(self.RightTopFrame)
+        self.RightTopTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
+        self.RightTopTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                "border-style: solid;\n"
+                                                "border-color: rgb(0, 153, 255);\n"
+                                                "border-width: 2px;\n"
+                                                "border-radius: 10px;")
+        self.RightTopTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.RightTopTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.RightTopTitleFrame.setObjectName("RightTopTitleFrame")
+
+        #Right Top Frame -FrameLabel -Title
+        self.RightTopTitle = QtWidgets.QLabel(self.RightTopTitleFrame)
+        self.RightTopTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.RightTopTitle.setFont(font)
+        self.RightTopTitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.RightTopTitle.setObjectName("RightTopTitle")
+
+        #Right Top Frame -ComboBox
+        self.GithubProjectCombo = QtWidgets.QComboBox(self.RightTopFrame)
+        self.GithubProjectCombo.setGeometry(QtCore.QRect(25, 60, 361, 30))
+        self.GithubProjectCombo.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                "border-style: solid;\n"
+                                                "border-color: rgb(0, 153, 255);\n"
+                                                "border-width: 2px;\n"
+                                                "border-radius: 8px;")
+        self.GithubProjectCombo.setObjectName("GithubProjectCombo")
+
+        conn = sqlite3.connect("project.db")
+        c = conn.cursor()
+
+        c.execute("SELECT * FROM project")
+
+        items = c.fetchall()
+        none = str(items)
+
+        if none == "[]":
+            self.GithubProjectCombo.addItem("No Repos Found")
+
+        else:
+            for item in items:
+                name = item[0]
+
+                self.GithubProjectCombo.addItem(name)
+
+        #Right Top Frame  -DeleteProject -Button
+        self.DeleteProject = QtWidgets.QPushButton(self.RightTopFrame)
+        self.DeleteProject.setGeometry(QtCore.QRect(120, 115, 171, 23))
+        self.DeleteProject.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                        "border-style: solid;\n"
+                                        "border-color: rgb(0, 153, 255);\n"
+                                        "border-width: 2px;\n"
+                                        "border-radius: 8px;")
+        self.DeleteProject.setObjectName("DeleteProject")
+        self.DeleteProject.clicked.connect(self.DeleteProjectEvent)
+
+
         #Right Bottom Frame
         self.RightBottomFrame = QtWidgets.QFrame(self.centralwidget)
-        self.RightBottomFrame.setGeometry(QtCore.QRect(870, 310, 411, 241))
+        self.RightBottomFrame.setGeometry(QtCore.QRect(870, 243, 411, 308))
         self.RightBottomFrame.setStyleSheet("background-color: rgb(43, 43, 43);\n"
                                                 "border-style: solid;\n"
                                                 "border-color: rgb(43, 43, 43);\n"
@@ -406,7 +466,7 @@ class Ui_ConfigUI(object):
         self.Wave.raise_()
         self.LeftTopFrame.raise_()
         self.LeftBottomFrame.raise_()
-        self.CenterFrameTop.raise_()
+        self.CenterTopFrame.raise_()
         self.CenterBottomFrame.raise_()
         self.RightTopFrame.raise_()
         self.RightBottomFrame.raise_()
@@ -439,6 +499,8 @@ class Ui_ConfigUI(object):
         self.ChooseFolderBottom.setText(_translate("ConfigUI", "Choose Folder"))
         self.AddProjectBottom.setText(_translate("ConfigUI", "Add Project"))
         self.CurrentProject.setText(_translate("MainWindow", f"Config Dashboard"))
+        self.RightTopTitle.setText(_translate("ConfigUI", "Project Delete"))
+        self.DeleteProject.setText(_translate("ConfigUI", "Delete Project"))
 
     def ChooseFolderTopEvent(self):
         self.responseTop = QFileDialog.getExistingDirectory(caption='Select a folder')
@@ -495,7 +557,7 @@ class Ui_ConfigUI(object):
 
         if folder == "" and project_name == "":
             #Right Top Frame -ErrorOutputFrame
-            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.RightFrameTop)
+            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.CenterFrameTop)
             self.ErrorTopOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorTopOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -520,7 +582,7 @@ class Ui_ConfigUI(object):
 
         elif folder == "":
             #Right Top Frame -ErrorOutputFrame
-            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.RightFrameTop)
+            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.CenterFrameTop)
             self.ErrorTopOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorTopOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -545,7 +607,7 @@ class Ui_ConfigUI(object):
 
         elif project_name == "":
              #Right Top Frame -ErrorOutputFrame
-            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.RightFrameTop)
+            self.ErrorTopOutputFrame = QtWidgets.QFrame(self.CenterFrameTop)
             self.ErrorTopOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorTopOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -572,24 +634,72 @@ class Ui_ConfigUI(object):
             conn = sqlite3.connect("project.db")
             c = conn.cursor()
 
-            c.execute(f"SELECT * FROM project WHERE project_name='{project_name}'")
+            c.execute(f"INSERT INTO project VALUES ('{project_name}', '{self.responseTop}')")
 
-            items_project = c.fetchall()
-            none_project = str(items_project)
+            conn.commit()
+            conn.close()
 
-            c.execute(f"SELECT * FROM project WHERE project_dir='{self.responseTop}'")
+            try:
+                self.ErrorOutputTop.setText("Project Made")
 
-            items_dir = c.fetchall()
-            none_dir = str(items_dir)
+            except:
+                 #Right Top Frame -ErrorOutputFrame
+                self.ErrorTopOutputFrame = QtWidgets.QFrame(self.CenterTopFrame)
+                self.ErrorTopOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
+                self.ErrorTopOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                        "border-style: solid;\n"
+                                                        "border-color: rgb(0, 153, 255);\n"
+                                                        "border-width: 2px;\n"
+                                                        "border-radius: 10px;")
+                self.ErrorTopOutputFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+                self.ErrorTopOutputFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+                self.ErrorTopOutputFrame.setObjectName("ErrorTopOutputFrame")
 
-            if none_project == "[]" and none_dir == "[]":
-                print("none_all")
+                #Right Top Frame -ErrorOutputFrame -Error
+                self.ErrorOutputBottom = QtWidgets.QLabel(self.ErrorTopOutputFrame)
+                self.ErrorOutputBottom.setGeometry(QtCore.QRect(11, 0, 301, 26))
+                font = QtGui.QFont()
+                font.setPointSize(8)
+                self.ErrorOutputBottom.setFont(font)
+                self.ErrorOutputBottom.setAlignment(QtCore.Qt.AlignCenter)
+                self.ErrorOutputBottom.setObjectName("ErrorOutputBottom")
+                self.ErrorOutputBottom.setText("Project Made")
 
-            elif none_dir == "[]":
-                print("none_dir")
+                self.ErrorTopOutputFrame.show()
 
-            elif none_project == "[]":
-                print("none_project")
+                self.ProjectList.clear()
+
+                conn = sqlite3.connect("project.db")
+                c = conn.cursor()
+
+                c.execute("SELECT rowid, * FROM project")
+
+                items = c.fetchall()
+                none = str(items)
+
+                if none == "[]":
+                    pass
+
+                else:
+                    for item in items:
+                        item_0 = QtWidgets.QTreeWidgetItem(self.ProjectList)
+
+                        rowid = int(item[0])
+                        name = item[1]
+                        dir = item[2]
+
+                        rowid = rowid - 1
+
+                        try:
+                            dir = dir.split("/Desktop")
+                            dir = dir[1]
+
+                        except:
+                            dir = dir[0]
+
+                        _translate = QtCore.QCoreApplication.translate
+                        self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
+                        self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
 
             
 
@@ -599,7 +709,7 @@ class Ui_ConfigUI(object):
 
         if folder == "" and project_name == "":
             #Right Top Frame -ErrorOutputFrame
-            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.RightBottomFrame)
+            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.CenterBottomFrame)
             self.ErrorBottomOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorBottomOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -624,7 +734,7 @@ class Ui_ConfigUI(object):
 
         elif folder == "":
             #Right Top Frame -ErrorOutputFrame
-            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.RightBottomFrame)
+            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.CenterBottomFrame)
             self.ErrorBottomOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorBottomOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -651,7 +761,7 @@ class Ui_ConfigUI(object):
 
         elif project_name == "":
              #Right Top Frame -ErrorOutputFrame
-            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.RightBottomFrame)
+            self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.CenterBottomFrame)
             self.ErrorBottomOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
             self.ErrorBottomOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                     "border-style: solid;\n"
@@ -745,40 +855,8 @@ class Ui_ConfigUI(object):
                         self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
                         self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
 
-    def test(self):
-        self.ProjectList.clear()
-
-        conn = sqlite3.connect("project.db")
-        c = conn.cursor()
-
-        c.execute("SELECT rowid, * FROM project")
-
-        items = c.fetchall()
-        none = str(items)
-
-        if none == "[]":
-            pass
-
-        else:
-            for item in items:
-                item_0 = QtWidgets.QTreeWidgetItem(self.ProjectList)
-
-                rowid = int(item[0])
-                name = item[1]
-                dir = item[2]
-
-                rowid = rowid - 1
-
-                try:
-                    dir = dir.split("/Desktop")
-                    dir = dir[1]
-
-                except:
-                    dir = dir[0]
-
-                _translate = QtCore.QCoreApplication.translate
-                self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
-                self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
+    def DeleteProjectEvent(self):
+        pass
 
 if __name__ == "__main__":
     import sys
