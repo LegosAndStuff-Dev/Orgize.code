@@ -1,11 +1,13 @@
 import asyncio
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QPushButton, QFileDialog, QVBoxLayout
+from PyQt5.QtGui import QPixmap
 import qrc
 from github import Github
 import json
 import sqlite3
 import time
+from PIL import Image
 
 class Ui_ConfigUI(object):
     def setupUi(self, ConfigUI, app):
@@ -435,6 +437,74 @@ class Ui_ConfigUI(object):
         self.RightBottomFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.RightBottomFrame.setObjectName("RightBottomFrame")
 
+        #Right Bottom Frame -FrameLabel
+        self.RightBottomTitleFrame = QtWidgets.QFrame(self.RightBottomFrame)
+        self.RightBottomTitleFrame.setGeometry(QtCore.QRect(20, 15, 371, 26))
+        self.RightBottomTitleFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                "border-style: solid;\n"
+                                                "border-color: rgb(0, 153, 255);\n"
+                                                "border-width: 2px;\n"
+                                                "border-radius: 10px;")
+        self.RightBottomTitleFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.RightBottomTitleFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.RightBottomTitleFrame.setObjectName("RightBottomTitleFrame")
+
+        #Right Bottom Frame -FrameLabel -Title
+        self.RightBottomTitle = QtWidgets.QLabel(self.RightBottomTitleFrame)
+        self.RightBottomTitle.setGeometry(QtCore.QRect(11, 0, 351, 26))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.RightBottomTitle.setFont(font)
+        self.RightBottomTitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.RightBottomTitle.setObjectName("RightBottomTitle")
+
+        #Right Bottom Frame -DiscordPFP
+        self.pfp = QtGui.QPixmap("Image/pfp/pfp.png")
+        self.label = QtWidgets.QLabel(self.RightBottomFrame)
+        self.label.setPixmap(self.pfp)
+        self.label.move(30,50)
+
+        #Right Bottom Frame -FrameInfo
+        self.InfoFrame = QtWidgets.QFrame(self.RightBottomFrame)
+        self.InfoFrame.setGeometry(QtCore.QRect(30, 195, 351, 95))
+        self.InfoFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                "border-style: solid;\n"
+                                                "border-color: rgb(43, 43, 43);\n"
+                                                "border-width: 2px;\n"
+                                                "border-radius: 10px;")
+        self.InfoFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.InfoFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.InfoFrame.setObjectName("InfoFrame")
+
+        #Right Bottom Frame -Info
+        self.Info = QtWidgets.QLabel(self.InfoFrame)
+        self.Info.setGeometry(QtCore.QRect(0, 0, 351, 95))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.Info.setFont(font)
+        self.Info.setAlignment(QtCore.Qt.AlignLeft)
+        self.Info.setObjectName("Info")
+
+        #Right Bottom Frame -FrameAbout
+        self.FrameAbout = QtWidgets.QFrame(self.RightBottomFrame)
+        self.FrameAbout.setGeometry(QtCore.QRect(175, 50, 205, 130))
+        self.FrameAbout.setStyleSheet("background-color: rgb(0, 153, 255);\n"
+                                                "border-style: solid;\n"
+                                                "border-color: rgb(43, 43, 43);\n"
+                                                "border-width: 2px;\n"
+                                                "border-radius: 10px;")
+        self.FrameAbout.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FrameAbout.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FrameAbout.setObjectName("FrameAbout")
+
+        #Right Bottom Frame -About
+        self.About = QtWidgets.QLabel(self.FrameAbout)
+        self.About.setGeometry(QtCore.QRect(0, 0, 351, 130))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.About.setFont(font)
+        self.About.setAlignment(QtCore.Qt.AlignLeft)
+        self.About.setObjectName("Info")
 
         #Wave
         self.Wave = QtWidgets.QGraphicsView(self.centralwidget)
@@ -470,6 +540,7 @@ class Ui_ConfigUI(object):
         self.CenterBottomFrame.raise_()
         self.RightTopFrame.raise_()
         self.RightBottomFrame.raise_()
+        self.InfoFrame.raise_()
 
         #Other
         ConfigUI.setCentralWidget(self.centralwidget)
@@ -501,6 +572,9 @@ class Ui_ConfigUI(object):
         self.CurrentProject.setText(_translate("MainWindow", f"Config Dashboard"))
         self.RightTopTitle.setText(_translate("ConfigUI", "Project Delete"))
         self.DeleteProject.setText(_translate("ConfigUI", "Delete Project"))
+        self.RightBottomTitle.setText(_translate("ConfigUI", "Info"))
+        self.Info.setText(_translate("ConfigUI", "Version - v1.0.0\nDeveloper - LegosAndStuff (Lego)\nPython Version - 3.9.10\nPyQT5 Version - 5.15.4"))
+        self.About.setText(_translate("ConfigUI", "Hey my name is Lego\nand I'm a python\ndeveloper. I mostly\ndevelop discord bots."))
 
     def ChooseFolderTopEvent(self):
         self.responseTop = QFileDialog.getExistingDirectory(caption='Select a folder')
