@@ -499,9 +499,9 @@ class Ui_ConfigUI(object):
 
         #Right Bottom Frame -About
         self.About = QtWidgets.QLabel(self.FrameAbout)
-        self.About.setGeometry(QtCore.QRect(0, 0, 351, 130))
+        self.About.setGeometry(QtCore.QRect(0, 0, 205, 130))
         font = QtGui.QFont()
-        font.setPointSize(9)
+        font.setPointSize(7)
         self.About.setFont(font)
         self.About.setAlignment(QtCore.Qt.AlignLeft)
         self.About.setObjectName("Info")
@@ -574,7 +574,7 @@ class Ui_ConfigUI(object):
         self.DeleteProject.setText(_translate("ConfigUI", "Delete Project"))
         self.RightBottomTitle.setText(_translate("ConfigUI", "Info"))
         self.Info.setText(_translate("ConfigUI", "Version - v1.0.0\nDeveloper - LegosAndStuff (Lego)\nPython Version - 3.9.10\nPyQT5 Version - 5.15.4"))
-        self.About.setText(_translate("ConfigUI", "Hey my name is Lego\nand I'm a python\ndeveloper. I mostly\ndevelop discord bots."))
+        self.About.setText(_translate("ConfigUI", "Hey my name is Lego\nand I'm a python\ndeveloper. I mostly\ndevelop discord bots.\nIf you need to contact me\nyou can dm at\nLegosAndStuff#0501"))
 
     def ChooseFolderTopEvent(self):
         self.responseTop = QFileDialog.getExistingDirectory(caption='Select a folder')
@@ -755,6 +755,8 @@ class Ui_ConfigUI(object):
                     pass
 
                 else:
+                    self.GithubProjectCombo.clear()
+
                     for item in items:
                         item_0 = QtWidgets.QTreeWidgetItem(self.ProjectList)
 
@@ -775,6 +777,7 @@ class Ui_ConfigUI(object):
                         self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
                         self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
 
+                        self.GithubProjectCombo.addItem(name)
             
 
     def MakeProjectBottomEvent(self):
@@ -832,7 +835,6 @@ class Ui_ConfigUI(object):
             self.ErrorBottomOutputFrame.show()
 
 
-
         elif project_name == "":
              #Right Top Frame -ErrorOutputFrame
             self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.CenterBottomFrame)
@@ -872,7 +874,7 @@ class Ui_ConfigUI(object):
 
             except:
                  #Right Top Frame -ErrorOutputFrame
-                self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.LeftBottomFrame)
+                self.ErrorBottomOutputFrame = QtWidgets.QFrame(self.CenterBottomFrame)
                 self.ErrorBottomOutputFrame.setGeometry(QtCore.QRect(45, 200, 321, 26))
                 self.ErrorBottomOutputFrame.setStyleSheet("background-color: rgb(0, 153, 255);\n"
                                                         "border-style: solid;\n"
@@ -909,6 +911,8 @@ class Ui_ConfigUI(object):
                     pass
 
                 else:
+                    self.GithubProjectCombo.clear()
+
                     for item in items:
                         item_0 = QtWidgets.QTreeWidgetItem(self.ProjectList)
 
@@ -929,8 +933,61 @@ class Ui_ConfigUI(object):
                         self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
                         self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
 
+                        self.GithubProjectCombo.addItem(name)
+
     def DeleteProjectEvent(self):
-        pass
+        current = self.GithubProjectCombo.currentText()
+
+        conn = sqlite3.connect("project.db")
+        c = conn.cursor()
+
+        c.execute(f"SELECT * FROM project WHERE project_name='{current}'")
+
+        items = c.fetchall()
+        none = str(items)
+
+        if none == "[]":
+            pass
+
+        else:
+            c.execute(f"DELETE FROM project WHERE project_name='{current}'")
+
+            conn.commit()
+
+            self.ProjectList.clear()
+            self.GithubProjectCombo.clear()
+
+            c.execute("SELECT rowid, * FROM project")
+
+            items = c.fetchall()
+            none = str(items)
+
+            if none == "[]":
+                pass
+
+            else:
+                for item in items:
+                    item_0 = QtWidgets.QTreeWidgetItem(self.ProjectList)
+
+                    rowid = int(item[0])
+                    name = item[1]
+                    dir = item[2]
+
+                    rowid = rowid - 1
+
+                    try:
+                        dir = dir.split("/Desktop")
+                        dir = dir[1]
+
+                    except:
+                        dir = dir[0]
+
+                    _translate = QtCore.QCoreApplication.translate
+                    self.ProjectList.topLevelItem(rowid).setText(0, _translate("ConfigUI", f"{name}"))
+                    self.ProjectList.topLevelItem(rowid).setText(1, _translate("ConfigUI", f"{dir}"))
+                    self.GithubProjectCombo.addItem(f"{name}")
+
+        
 
 if __name__ == "__main__":
     import sys
